@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://kit.fontawesome.com/a9391ffb80.js"></script>
+  <!-- Bootstrap Icons (Bi) CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <title>e-commerce</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="text-center">
+      <h1 style="color: rgb(1, 4, 20);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">BLUE<span style="color: blue;">BAY</span></h1>
+    </div>
+
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}" style="color: white;">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'shop' %}" style="color: white;">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}" style="color: white;">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+                    <div class="d-flex justify-content-right">
+                        <!-- Changed float-end to justify-content-end -->
+                        <a href="{% url 'sign' %}" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center"
+                            target="_blank"> <i class="fas fa-user-alt m-1 me-md-2"></i><p
+                                class="d-none d-md-block mb-0">Sign in</p> </a>
+                        <a href="{% url 'wishlist' %}"
+                            class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                                class="fas fa-heart m-1 me-md-2"></i><p class="d-none d-md-block mb-0">Wishlist</p> </a>
+                        <a href="{% url 'cart' %}"
+                            class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                                class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-none d-md-block mb-0">Mycart</p>
+                        </a>
+                    </div>
+                </div>
+  </nav>
+
+
+  <div class="text-center">
+    <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">ABOUT<span style="color: red;">US</span></h1>
+  </div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'image/about.jpg' %}" class="d-block w-100 " alt="..." style="height: 400px;">
+      </div>
+    </div>
+  </div>
+  <div class="text-container">
+    <div style="margin-top: 110px;">
+      <p class="h3">Welcome To Bluebay Fashion Store,</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Welcome to bluebay where fashion meets convenience at your fingertips.</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Embrace the seamless fusion of style and technology as we bring you,</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">An unparalleled shopping experience,Complete with the ease of online</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Payments.At Bluebay, we understand the importance of modernizing the way</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">you shop,And that's why we offer a secure and user-friendly online payment</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">System.Now, you can explore our curated collections from the comfort of</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Your home and effortlessly complete your purchase with just a few clicks.</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Join us in embracing the digital era of transactions at bluebay.</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Simplify your life, streamline your payments, and experience a new</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Level of convenience. Welcome to a world where online payments are not</p>
+      <p class="h4" style="font-family: 'Times New Roman', Times, serif;">Just transactions but a seamless part of your lifestyle.</p>
+    </div>
+    <img src="{% static 'image/CART.png' %}" class="img-fluid4" alt="...">
+
+
+  </div>
+
+
+  <div class="container11">
+    <section class="columns">
+      <div class="column">
+        <h2>CONTACT</h2>
+        <p>adnankou01@gmail.com</p>
+        <p>+91 987563446536</p>
+        <p>kerala 87656 Cochin, India 1234</p>
+      </div>
+    </section>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+          <div class="col-auto">
+              <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="col-auto">
+              <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="col-auto">
+              <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="col-auto">
+              <i class="fa-brands fa-instagram"></i>
+          </div>
+      </div>
+  </div>
+
+  </div>
+</body>
+
+</html>

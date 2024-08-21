@@ -1,0 +1,410 @@
+/* bluebay.html */
+#div1{
+    width: 100%;
+    height: 250px;
+    background-color:rgb(216, 241, 231);
+}
+/* .carousel-caption{
+    margin-left:0px;
+    margin-top: 11px;
+} */
+#collapsibleNavbar2{
+    margin-left:250px;
+}
+.collapsibleNavbar1{
+    margin-left: 30px;
+}
+#search{
+    margin-left: 200px;
+}
+/* .carousel-inner{
+    color: color(srgb red green blue);
+} */
+
+/* .container40{
+    width: 100%;
+} */
+.img-fluid{
+    width: 446PX;
+    height: 322px;
+    border-radius: 5%;
+
+}
+.text-center{
+    padding: 8px;
+}
+.text-center{
+    font-size: 20px;
+    font-family: fantasy;
+}
+.container12{
+    width: 100%;
+    background-color: rgb(230 227 222);
+    margin-top: auto;
+    margin-left: 50px;
+}
+
+.container20{
+    box-sizing: border-box;
+    margin-top: 45px;
+    margin-left: 299px;
+    padding: 10px;
+}
+
+:root{
+    --white: #fff;
+    --main-color: #A0C438;
+}
+.serviceBox{
+    color: var(--main-color);
+    background: linear-gradient(to bottom ,var(--main-color) 36%,var(--white) 36%);
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    padding: 15px 20px 25px;
+    border-radius: 15px 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+.serviceBox:after{
+    content: "";
+    background: var(--main-color);
+    width: calc(100% - 100px);
+    height: 8px;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+}
+.serviceBox .service-icon{
+    color: var(--main-color);
+    background: var(--white);
+    font-size: 40px;
+    text-align: center;
+    line-height: 85px;
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 40px;
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+}
+.serviceBox .service-icon span{
+    display: block;
+    transform: rotate(-45deg);
+}
+.serviceBox .title{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 5px;
+}
+.serviceBox .description{
+    color: #888;
+    font-size: 13.2px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+}
+.serviceBox.pink{ --main-color: #a2190a; }
+.serviceBox.red{ --main-color: #044f08e3; }
+.serviceBox{ --main-color: #6c0456; }
+@media only screen and (max-width: 1199px){
+    .serviceBox{ margin: 0 0 40px; }
+}
+
+
+ .container11{
+    height: 208px;
+    margin-top: 5px;
+    background-color: #e9ecef;
+    width: 100%;
+
+}
+header{
+    padding: 0 15px;
+    text-align: center;
+    font-size: 21px;
+}
+.columns{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+.column{
+    flex: 1;
+    border:1px;
+    margin: 2px;
+    padding: 10px;
+}
+.container-fluid10{
+    margin: -27px;
+    margin-left: 649px;
+    font-size: 23px;
+}
+
+.dropdown-menu :hover{
+    background-color: rgb(5, 188, 145)
+}
+.text-container0 {
+    flex: 1;
+    font-family: unset;
+    margin-top: -18px;
+    padding: 34px;
+    margin-left: 69px;}
+/* mens collection /WOMENS COLLECTION*/
+.image-container100{
+    margin-left: 19px;
+}
+.carousel-caption{
+    margin-left: 528px;
+    margin-top: 30px;
+}
+.container-fluid-10{
+    width: 100%;
+    margin-top: 30px;
+    color: rgb(245, 239, 238);
+    background-color: #a70684;
+
+}
+.text-center22{
+    font-size: 29px;
+    font-family: monospace;
+    margin-left: 541px;
+    padding: 7px
+}
+
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    flex: 1;
+    font-family: unset;
+    margin-top: -118px;
+    padding: 34px;
+    margin-left: 69px;
+     /* Adjust the spacing between text and image */
+}
+.button11{
+    margin-left: 90px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+
+.img-fluid44 {
+    max-width: 100%;
+    height: auto;
+    margin-left: 53px;
+    margin-top: 70px;
+}
+.text-container1{
+    margin-top: 30px;
+}
+
+/* /WOMENS COLLECTION*/
+.img-fluid43 {
+    max-width: 100%;
+    height: auto;
+    margin-left: 53px;
+    margin-top: -68px;
+}
+.text-container2{
+    margin-top: 30px;
+}
+/* ABOUTUS */
+.img-fluid4{
+    margin-left: 507PX;
+    margin-top: -616PX;
+}
+
+/* feedback */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .rating input {
+    display: none;
+  }
+  .rating label {
+    cursor: pointer;
+    color: #ddd;
+    font-size: 30px;
+  }
+  .rating label:hover,
+  .rating label:hover ~ label,
+  .rating input:checked ~ label {
+    color: orange;
+  }
+  .modal-body {
+    text-align: center;
+
+  }
+
+  /* wishlist */
+  .cart-wrap {
+	padding: 40px 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.main-heading {
+	font-size: 19px;
+	margin-bottom: 20px;
+}
+.table-wishlist table {
+    width: 100%;
+}
+.table-wishlist thead {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 5px;
+}
+.table-wishlist thead tr th {
+    padding: 8px 0 18px;
+    color: #484848;
+    font-size: 15px;
+    font-weight: 400;
+}
+.table-wishlist tr td {
+    padding: 25px 0;
+    vertical-align: middle;
+}
+.table-wishlist tr td .img-product {
+    width: 72px;
+    float: left;
+    margin-left: 8px;
+    margin-right: 31px;
+    line-height: 63px;
+}
+.table-wishlist tr td .img-product img {
+	width: 100%;
+}
+.table-wishlist tr td .name-product {
+    font-size: 15px;
+    color: #484848;
+    padding-top: 8px;
+    line-height: 24px;
+    width: 50%;
+}
+.table-wishlist tr td.price {
+    font-weight: 600;
+}
+.table-wishlist tr td .quanlity {
+    position: relative;
+}
+
+.total {
+	font-size: 24px;
+	font-weight: 600;
+	color: #8660e9;
+}
+.display-flex {
+	display: flex;
+}
+.align-center {
+	align-items: center;
+}
+.round-black-btn {
+	border-radius: 25px;
+    background: #212529;
+    color: #fff;
+    padding: 5px 20px;
+    display: inline-block;
+    border: solid 2px #212529;
+    transition: all 0.5s ease-in-out 0s;
+    cursor: pointer;
+    font-size: 14px;
+}
+.round-black-btn:hover,
+.round-black-btn:focus {
+	background: transparent;
+	color: #212529;
+	text-decoration: none;
+}
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+.mt-30 {
+    margin-top: 30px !important;
+}
+.d-block {
+    display: block;
+}
+.custom-form label {
+    font-size: 14px;
+    line-height: 14px;
+}
+.pretty.p-default {
+    margin-bottom: 15px;
+}
+.pretty input:checked~.state.p-primary-o label:before,
+.pretty.p-toggle .state.p-primary-o label:before {
+    border-color: #8660e9;
+}
+.pretty.p-default:not(.p-fill) input:checked~.state.p-primary-o label:after {
+    background-color: #8660e9 !important;
+}
+.main-heading.border-b {
+    border-bottom: solid 1px #ededed;
+    padding-bottom: 15px;
+    margin-bottom: 20px !important;
+}
+.custom-form .pretty .state label {
+    padding-left: 6px;
+}
+.custom-form .pretty .state label:before {
+    top: 1px;
+}
+.custom-form .pretty .state label:after {
+    top: 1px;
+}
+.custom-form .form-control {
+    font-size: 14px;
+    height: 38px;
+}
+.custom-form .form-control:focus {
+    box-shadow: none;
+}
+.custom-form textarea.form-control {
+    height: auto;
+}
+.mt-40 {
+    margin-top: 40px !important;
+}
+.in-stock-box {
+	background: #025206;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 25px;
+	padding: 4px 15px;
+	display: inline-block;
+    color: #fff;
+}
+
+
+  /* CONTACT */ */
+
+  .image-container33 img {
+    max-width: 100%;
+    height: auto;
+  }
+  #inputmessage{
+    height: 130PX;
+  }
+
+  .carousel-caption{
+    margin-left: -234;
+  }
+
+/* sign animation
+   */
+
+

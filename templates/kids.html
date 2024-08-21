@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <script src="https://kit.fontawesome.com/a9391ffb80.js"></script>
+   <!-- Bootstrap Icons (Bi) CDN -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <title>e-commerce</title>
+</head>
+
+<body> 0
+    <div class="container-fluid">
+        <div class="container-fluid text-center">
+            <h1 style="color: rgb(1, 4, 20);font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">
+                KIDS <span style="color: blue;">BAY</span>
+            </h1>
+
+        </div>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-left">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}" style="color: white;">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'shop' %}" style="color: white;">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}"  style="color: white;">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}"  style="color: white;">ABOUT US</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                CATAGORIES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">SHIRTS</a></li>
+                                <li><a class="dropdown-item" href="#">T-SHIRTS</a></li>
+                                <li><a class="dropdown-item" href="#">SKRIPTS</a></li>
+                                <li><a class="dropdown-item" href="#">JACKETS</a></li>
+                                <li><a class="dropdown-item" href="#">HOODIES</a></li>
+                                <li><a class="dropdown-item" href="#">JEANS SHIRT</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                     <form class="d-flex me-auto" id="search" method="POST">
+                        {% csrf_token %}
+                        <input class="form-control me-2" type="text" name="search" placeholder="Search" aria-label="Search"> <!-- Changed name attribute to "search" -->
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav ms-right">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'wishlist' %}"><i class="fa-solid fa-heart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'login' %}"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 400px;">
+              <img src="{% static 'image/kids.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h1>Your babies care our responsibility!</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+<div class="container22">
+    <div class="text-center" style="padding: 10px;">
+      <h3 style="font-family: monospace;">KIDS BRANDS</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <img src="{% static 'image/KID.png' %}" class="img-thumbnail" alt="...">
+        </div>
+        <div class="col-md-2">
+          <img src="{% static 'image/download (4).jpg' %}" class="img-thumbnail" alt="...">
+        </div>
+        <div class="col-md-2">
+          <img src="{% static 'image/Gap_logo.svg.png' %}" class="img-thumbnail" alt="...">
+        </div>
+        <div class="col-md-2">
+          <img src="{% static 'image/MOM.jpg' %}" class="img-thumbnail" alt="...">
+        </div>
+        <div class="col-md-2">
+          <img src="{% static 'image/LILLY.jpg' %}" class="img-thumbnail" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 30PX;">KID'S COLLECTION</div>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-3">
+          <img src="{% static 'image/KID5.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>SHIRT</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID1.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>SKRIPT</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID2.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>JEANS SHIRT</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID3.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>T-SHIRT</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID4.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>MINI SKRITS</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID7.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>JEANS PANTS</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID6.jpg' %}" class="img-thumbnail" alt="...">
+          <h4>HOODIES</h4>
+      </div>
+      <div class="col-md-3">
+          <img src="{% static 'image/KID8.jpg '%}" class="img-thumbnail" alt="...">
+          <h4>NIGHT DRESS</h4>
+      </div>
+
+
+
+        <div class="text-center">
+            <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;padding-top: 12px;">KID'S COLLECTION</h2>
+        </div>
+
+<div class="container mt-4" style="width: 350px; margin-left: 5px;" >
+            <div class="row">
+                <!-- Price Range Filter -->
+                <div class="col-sm-6">
+                    <h5 class="small">Sorted by Price Range</h5>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text small" for="priceRangeSelect">Price</label>
+                        <select class="form-select form-select-sm" id="priceRangeSelect">
+                            <option value="100-499">100 - 499</option>
+                            <option value="500-999">500 - 999</option>
+                            <option value="1000-1499">1000 - 1499</option>
+                            <option value="1500-1999">1500 - 1999</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Discount Filter -->
+                <div class="col-sm-6">
+                    <h5 class="small">Sorted by Discount</h5>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text small" for="discountSelect">Discount</label>
+                        <select class="form-select form-select-sm" id="discountSelect">
+                            <option value="10-20">10% - 20%</option>
+                            <option value="21-30">21% - 30%</option>
+                            <option value="31-40">31% - 40%</option>
+                            <option value="41-60">41% - 60%</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for x in index %}
+        <div class="col mb-4">
+            <div class="card">
+                <div class="position-relative">
+                    <img src="{{ x.image_id.image.url }}" class="card-img-top" alt="...">
+                    <div class="position-absolute top-0 end-0 m-2">
+                        <a href="/add_wishlist/{{x.product_id}}"  class="btn btn-light btn-wishlist" style="color: rgb(244, 241, 241); background-color: rgb(251, 4, 4);">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{x.brand_name}}</h5>
+                    <p class="card-text" style="color: #000;">{{x.product_name}}</p>
+                    <p class="card-text" style="color: #160101;">
+                        <del style="color: #6c6968;"><b>{{x.Product_price}}</b></del>
+                        <b>RS:{{x.discount_price}}</b>
+                    </p>
+                    <p class="card-text" style="color: #ec3c06;">{{x.discount_percentage}}% offer </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <a href=""><button type="button" class="btn btn-outline-warning">ADD CART</button></a>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <a href="buy_now/{{x.product_id}}"><button type="button" class="btn btn-outline-success">BUY NOW</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid-10">
+    <h1 class="text-center22">ABOUT US</h1>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-us-container">
+                    <div class="text-container1">
+                        <h1>Why Choose <b style="color: #f50e06;">US ?</b></h1>
+                        <p>
+                            “Looking good isn't self-importance; it's self-respect.”
+                            “Dressing well is a form of good manners.”
+                            “The boor covers himself, the rich man or the fool adorns himself,
+                            and the elegant man gets dressed.”
+                            “Men's fashions all start as sports clothes and progress to the great occasions of state.”
+                        </p>
+                        <a href="{% url 'about' %}"  class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="{% static 'image/cart1.jpg '%}" class="img-fluid rounded-circle" alt="Cinque Terre">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+         <div class="container11">
+            <section class="columns">
+                <div class="column">
+                    <h2>CONTACT</h2>
+                    <p>adnankou01@gmail.com</p>
+                    <p>+91 987563446536</p>
+                    <p>kerala 87656 Cochin, India 1234</p>
+                </div>
+            </section>
+           <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="col-auto">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="col-auto">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="col-auto">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+</div>
+
+        </div>
+  </div>
+</html>
+
+

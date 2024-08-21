@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <script src="https://kit.fontawesome.com/a9391ffb80.js"></script>
+  <!-- Bootstrap Icons (Bi) CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <title>e-commerce</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" style="color: rgb(0, 0, 15); font-family:Georgia, 'Times New Roman', Times, serif;">BLUE<span style="color: blue;"> BAY</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'cart' %}">
+							<i class="fas fa-shopping-cart"></i>
+						</a>
+					</li> <!-- Changed class from "me-left" to "ms-auto" for right alignment -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							<i class="fas fa-user"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+							<li><a class="dropdown-item" href="#">My Profile</a></li>
+							<li><a class="dropdown-item" href="#">Logout</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="text-center">
+		<h1 style= "font-family: initial; color: rgb(18, 193, 236);">WISHLIST <i class="fas fa-heart" style="color: red;"></i></h1></div>
+		<a href="{% url 'home' %}"><i class="fas fa-angle-left me-2"></i>Back</a>
+<div class="cart-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wishlist">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="45%">Product Name</th>
+                                <th width="15%">Price</th>
+                                <th width="15%">Stock Status</th>
+                                <th width="15%"></th>
+                                <th width="10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for x in wishlist_items %}
+                            <tr>
+                                <td width="45%">
+                                    <div class="display-flex align-center">
+                                        <div class="img-product">
+                                            <img src="{{x.product_id.image_id.image.url}}" class="mCS_img_loaded">
+                                        </div>
+                                        <div class="name-product">
+                                            {{ x.product_id.product_name }}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="15%" class="price">{{ x.product_id.Product_price }}</td>
+                                <td width="15%"><span class="in-stock-box">In Stock</span></td>
+                                <td width="15%"><button class="round-black-btn small-btn">Add to Cart</button></td>
+                                <td width="10%" class="text-center">
+                                    <a href="/remove_wishlist/{{x.product_id.product_id}}" class="trash-icon"><i class="far fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

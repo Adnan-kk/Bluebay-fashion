@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a9391ffb80.js"></script>
+    <title>blue_bay</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container-fluid text-center">
+            <h1 style="color: rgb(1, 4, 20);font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">
+                BLUE <span style="color: blue;">BAY</span>
+            </h1>
+            <h5 style="color: black;font-family: Arial, Helvetica, sans-serif;">Fashion</h5>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-left">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}" style="color: white;">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'shop' %}" style="color: white;">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}" style="color: white;">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}" style="color: white;">ABOUT US</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                CATAGORIES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'men' %}">MEN'S COLLECTION</a></li>
+                                <li><a class="dropdown-item" href="{% url 'women' %}">WOMEN'S COLLECTION</a></li>
+                                <li><a class="dropdown-item" href="{% url 'kids' %}">KID'S COLLECTION</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-auto" id="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav ms-right">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'wishlist' %}"><i class="fa-solid fa-heart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'login' %}"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner" >
+            <div class="carousel-item active" style="height: 400px;">
+              <img src="{% static 'image/picture1.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="margin-left: 0PX;">
+                <h3>Fashion is choice</h3>
+                <p>Discover and find your own Fashion.</p>
+              </div>
+            </div>
+            <div class="carousel-item" style="height: 400px;">
+              <img src="{% static 'image/wome.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="margin-left: 0PX;color: black;">
+                <h3>Fashion reflects who you are</h3>
+                <p>Discover and find your own Fashion.</p>
+              </div>
+            </div>
+            <div class="carousel-item" style="height: 400px;">
+              <img src="{% static 'image/kutty.jpg '%}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="margin-left: 0;" >
+                <h3>Dressing is a way of life</h3>
+                <p>Discover and find your own Fashion..</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="container-fluid text-center mt-4">
+          <h1 style="font-family: Ubuntu;">FIND YOUR OWN COLLECTION...!</h1>
+      </div>
+
+      <div class="container-fluid mt-6">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="img-thumbnail">
+                    <img src="{% static 'image/men.jpg '%}" class="img-fluid" alt="">
+                    <a href="{% url 'men' %}"><button class="btn btn-primary mt-2"> MEN'S BAY</button></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-thumbnail">
+                    <img src="{% static 'image/lady,.jpg '%}" class="img-fluid" alt="">
+                    <a href="{% url 'women' %}"><button class="btn btn-primary mt-2">LADY'S BAY</button></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-thumbnail">
+                    <img src="{% static 'image/boys.jpg '%}" class="img-fluid" alt="">
+                    <a href="{% url 'kids' %}"><button class="btn btn-primary mt-2">KID'S BAY</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+      <p >The way you dress is an expression of your personality. ...</p>
+      <p >The only rule is don't be boring and dress cute wherever you go. ...</p>
+    </div>
+    <div class="container-fluid-1">
+      <h1 class="text-center mt-4" style="background-color: rgb(6, 1, 34);font-family: Arial, Helvetica, sans-serif; color:rgb(255, 253, 253);" >TOP SELLING PRODUCTS</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card text-center border-2 border-warning">
+                    <div class="card-body">
+                        <img src="../media/image/shirtgrey.jpg" alt="" class="card-img-top">
+                        <h2 class="card-title">ADDRESS</h2>
+                        <p class="card-text"> SHIRT </p>
+                        <a href="{% url 'shop' %}" class="btn btn-danger" style="background-color: rgb(159, 4, 248);">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card text-center border-2 border-warning">
+                    <div class="card-body">
+                        <img src="../media/image/jeans-shirt.jpg" alt="" class="card-img-top">
+                        <h2 class="card-title">PETER ENGLAND</h2>
+                        <p class="card-text">MENS SHIRT </p>
+                        <a href="{% url 'shop' %}" class="btn btn-danger" style="background-color:rgb(159, 4, 248);;">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card text-center border-2 border-warning">
+                    <div class="card-body">
+                        <img src="../media/image/shoe.jpg" alt="" class="card-img-top">
+                        <h2 class="card-title">NIKE</h2>
+                        <p class="card-text">MEN'S SHOES </p>
+                        <a href="{% url 'shop' %}"class="btn btn-danger" style="background-color: rgb(159, 4, 248);">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card text-center border-2 border-warning">
+                    <div class="card-body">
+                        <img src='../media/image/shirt.jpg' alt="" class="card-img-top">
+                        <h2 class="card-title">US POLO</h2>
+                        <p class="card-text"> MENS SHIRT</p>
+                        <a href="{% url 'shop' %}" class="btn btn-danger" style="background-color:rgb(159, 4, 248);">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" style="height: 400px;">
+            <div class="carousel-item active">
+                <img src="{% static 'image/purchase.jpg' %}" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="text-danger" style="font-size: 30px;">FLAT OFFER FOR</h4>
+                    <h1 class="text-dark" style="font-family: 'monospace';"><span style="color: #03154F;">CARD</span> PURCHASES</h1>
+                    <h4 class="text-dark">20% to 50%</h4>
+                    <h2 class="text-dark" style="font-family: 'monospace';">DISCOUNT</h2>
+                    <p class="text-dark" style="font-family: cursive;">OFFER AVAILABLE FOR APRIL-1 TO JUNE-3</p>
+                    <a href="{% url 'shop' %}"class="btn btn-danger">SHOP NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section>
+      <div class="container my-5">
+        <header class="mb-4">
+          <h3 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Featured Products</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card px-4 border shadow-0 mb-4 mb-lg-0">
+              <div class="mask px-2" style="height: 50px;">
+                <div class="d-flex justify-content-between">
+                  <h6><span class="badge bg-primary pt-1 mt-3 ms-2">Soon</span></h6>
+                  <a href="#"><i class="fas fa-heart text-danger fa-lg float-end pt-3 m-2"></i></a>
+                </div>
+              </div>
+              <a href="#" class="">
+                <img src="{% static 'image/sethead.jpg' %}" class="card-img-top rounded-2" />
+              </a>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                <a href="#" class="nav-link">Head Set</a>
+                <div class="price-wrap mb-2">
+                  <strong class="">RS:1,199</strong>
+                </div>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#" class="btn btn-outline-primary w-100">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card px-4 border shadow-0 mb-4 mb-lg-0">
+              <div class="d-flex justify-content-between">
+                  <h6><span class="badge bg-primary pt-1 mt-3 ms-2">Soon</span></h6>
+                  <a href="#"><i class="fas fa-heart text-danger fa-lg float-end pt-3 m-2"></i></a>
+                </div>
+              <a href="#" class="">
+                <img src="{% static 'image/apple.jpg' %}" class="card-img-top rounded-2" />
+              </a>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                <a href="#" class="nav-link">Apple Iphone 15pro </a>
+                <div class="price-wrap mb-2">
+                  <strong class="">RS:148,999</strong>
+                </div>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#" class="btn btn-outline-primary w-100">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card px-4 border shadow-0">
+              <div class="d-flex justify-content-between">
+                  <h6><span class="badge bg-primary pt-1 mt-3 ms-2">Soon</span></h6>
+                  <a href="#"><i class="fas fa-heart text-danger fa-lg float-end pt-3 m-2"></i></a>
+                </div>
+              <a href="#" class="">
+                <img src="{% static 'image/nike.webp' %}" class="card-img-top rounded-2" />
+              </a>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                <a href="#" class="nav-link">Nike shoe</a>
+                <div class="price-wrap mb-2">
+                  <strong class="">RS:4,899</strong>
+                </div>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#" class="btn btn-outline-primary w-100">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card px-4 border shadow-0">
+              <div class="d-flex justify-content-between">
+                  <h6><span class="badge bg-primary pt-1 mt-3 ms-2">Soon</span></h6>
+                  <a href="#"><i class="fas fa-heart text-danger fa-lg float-end pt-3 m-2"></i></a>
+                </div>
+              <a href="#" class="">
+                <img src="{% static 'image/smartwatch.jpg' %}" class="card-img-top rounded-2" />
+              </a>
+              <div class="card-body d-flex flex-column pt-3 border-top">
+                <a href="#" class="nav-link">Smart watch </a>
+                <div class="price-wrap mb-2">
+                  <strong class="">RS:2,999</strong>
+                </div>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#" class="btn btn-outline-primary w-100">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <div class="container-fluid-1">
+        <h1 class="text-center mt-4" style="font-family: Kaushan Script;" >OUR SERVICES</h1>
+        </div>
+
+        <div class="container mt-4">
+          <div class="row">
+              <div class="col-md-4 col-sm-6">
+                  <div class="serviceBox">
+                      <div class="service-icon">
+                          <span><i class="fa-solid fa-truck-fast"></i></span>
+                      </div>
+                      <h3 class="title">EXPRESS DELIVERY</h3>
+                      <p class="description">FAST & PROTECTIVE</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                  <div class="serviceBox pink">
+                      <div class="service-icon">
+                          <span><i class="fa-solid fa-percent"></i></span>
+                      </div>
+                      <h3 class="title">REGULAR DISCOUNT</h3>
+                      <p class="description">DAILY UPDATED</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                  <div class="serviceBox red">
+                      <div class="service-icon">
+                          <span><i class="fa-solid fa-map-location"></i></span>
+                      </div>
+                      <h3 class="title">ORDER TRACKING</h3>
+                      <p class="description">FIND YOUR PRODUCT</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid text-center mt-4" style="font-family: monospace;">
+        <div class="row">
+            <i class="fa-solid fa-tag fs-1"></i>
+        </div>
+            <div class="col-md-12">
+                <h1 class="ui-rounded fs-4">25% OFF</h1>
+            </div>
+
+            <div class="col-md-12 mt-2">
+                <h2>On All Orders Above RS:299!</h2>
+            </div>
+            <div class="col-md-12 mt-2">
+
+                <h3>Visit our shop page to buy good model fashion dresses with the offer..!</h3>
+                <h3 >We provide you with any type of branded dress you like with the offer...</h3>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="container-fluid"> -->
+
+    </div>
+    <div class="container-fluid-1">
+      <h1 class="text-center mt-4" style="background-color: rgb(61, 2, 36);font-family: Arial, Helvetica, sans-serif; color: white;">ABOUTUS</h1>
+      </div>
+      <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-us-container">
+                    <div class="text-container0">
+                        <h1>Why Choose <b style="color: #f50e06;">US ?</b></h1>
+                        <p>
+                            “Looking good isn't self-importance; it's self-respect.”
+                            “Dressing well is a form of good manners.”
+                            “The boor covers himself, the rich man or the fool adorns himself,
+                            and the elegant people get dressed.”
+                            “Peoples' fashions all start as sports clothes and progress to the great occasions of state.”
+                        </p>
+                        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="{% static 'image/cart1.jpg '%}" class="img-fluid rounded-circle" alt="Cinque Terre">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container11">
+            <section class="columns">
+                <div class="column">
+                    <h2>CONNECT</h2>
+                    <p>adnankou01@gmail.com</p>
+                    <p>+91 9061546248</p>
+                    <p>kerala 682001 Cochin, India 1234</p>
+                </div>
+            </section>
+            <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="col-auto">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="col-auto">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="col-auto">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</body>
+
+</html>
